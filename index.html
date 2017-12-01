@@ -38,21 +38,22 @@
 		* 
 		*/
         $(document).ready(function(){
+            // Requirement 6b: Flickr API
             var url = "https://api.flickr.com/services/feeds/photos_public.gne?tags=pickleball&format=json&jsoncallback=?&per_page=1";
 
             $.getJSON(url, function(data) {
+                // Requirement 4b: jQuery Method attr
                 var html = $("<img/>").attr({src: data.items[0].media.m.replace('_m.','.')});
 
                 $(".hero-image").html(html);
             })
         })
-
-        
         </script>
     </head>
     <body class="index">
         <header class="header__container container">
             <h1>Pickleball: America's Fastest Growing Sport</h1>
+            <p>IS_LT 7356: Interactive Web Design with Javascript</p>
         </header>
         <nav role="navigation" class="primary-navigation">
             <div class="container">
@@ -78,7 +79,7 @@
                             <div class="grid-double__column">
                                 <h1>A Brief History</h1>
                                 <p>Pickleball was invented in 1965 on Bainbridge Island, a short ferry ride from Seattle, Washington. Three dads – Joel Pritchard, Bill Bell, and Barney McCallum — whose kids were bored with their usual summertime activities — are credited for creating game. Pickleball has evolved from original handmade equipment and simple rules into a popular sport throughout the US and Canada. The game is growing internationally as well, with many European and Asian countries adding courts.</p>
-                                <p>(From the <a href="https://www.usapa.org/what-is-pickleball-brief-history" target="_blank">USAPA</a>)</p>
+                                <p>(From the <a href="https://www.usapa.org/what-is-pickleball-brief-history" target="_blank">USA Pickleball Association</a>)</p>
                             </div>
                         </div>  
                     </div>
@@ -99,7 +100,7 @@
         
         <footer class="">
             <div class="container">
-                <p class="copyright">&copy; 2017 Travis Cook</p>
+                <p class="copyright">&copy; 2017 Travis Cook<br/>IS_LT 7356: Interactive Web Design with JavaScript</p>
             </div>
         </footer>
 

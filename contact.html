@@ -49,21 +49,34 @@
         <div class="content">
             <main class="">
                 <div class="content__container container">
+                    <h1>Contact</h1>
                     <form>
                         <h3>Are you ready?!</h3>
-                        <input type="checkbox" value="court">Court</input>
-                        <input type="checkbox" value="paddle">Paddle</input>
-                        <input type="checkbox" value="ball">Ball</input>
-                        <input type="checkbox" value="partner">Someone to play against</input>
+                        <div class="form-item">
+                            <div class="form-label">
+                                    <label for="name" id="name">Name</label>
+                            </div>
+                            <div class="item-type">
+                                <input type="text" name="name" id="name" />
+                            </div>
+                        </div>
+                        <div class="form-item">
+                            <div class="form-label">
+                                <label for="email" id="email">Email</label>
+                            </div>
+                            <div class="item-type">
+                                 <input type="email" name="email" id="email" />
+                            </div>
+                        </div>
+                        
                     </form>
-
                 </div>
             </main>
         </div>
         
         <footer class="">
             <div class="container">
-                <p class="copyright">&copy; 2017 Travis Cook</p>
+                    <p class="copyright">&copy; 2017 Travis Cook<br/>IS_LT 7356: Interactive Web Design with JavaScript</p>
             </div>
         </footer>
 

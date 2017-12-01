@@ -30,6 +30,18 @@
 
         <!-- Your styles -->
         <link rel="stylesheet" href="style.css">
+
+        <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+        <script type="text/javascript">
+        $(document).ready(function(){
+            var cbs = document.querySelectorAll('input[type=checkbox]');
+            var cbsChecked = document.querySelectorAll('input[type="checkbox"]:checked');
+
+            if(cbsChecked.length === cbs.limit) {
+                alert("test");
+            }
+        })
+        </script>
     </head>
     <body class="index">
         <header class="header__container container">
@@ -40,8 +52,8 @@
                 <ul class="nav-item--list">
                     <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
                     <li class="nav-item"><strong class="nav-current-page">What You Need</strong></li>
-                    <li class="nav-item"><a href="" class="nav-link">Play</a></li>
-                    <li class="nav-item"><a href="" class="nav-link">Contact</a></li>
+                    <li class="nav-item"><a href="play.html" class="nav-link">Play</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
                 </ul>
             </div>
             
@@ -49,21 +61,53 @@
         <div class="content">
             <main class="">
                 <div class="content__container container">
+                        <section id="court">
+                            <div class="grid__row">
+                                <div class="grid-double__column">
+                                    <h2>Court</h2>
+                                </div>
+                                <div class="grid-double__column">
+                                    <p></p>   
+                                </div>      
+                            </div>    
+                        </section>
+    
+                        <section id="paddle">
+                            <div class="grid__row">
+                                <div class="grid-double__column">
+                                    <p></p>
+                                </div>
+                                <div class="grid-double__column">
+                                    <h2>Paddle</h2>        
+                                </div>      
+                            </div>         
+                        </section>
+    
+                        <section id="ball">
+                            <div class="grid__row">
+                                <div class="grid-double__column">
+                                    <h2>Ball</h2>    
+                                </div>
+                                <div class="grid-double__column">
+                                    <p></p>        
+                                </div>      
+                            </div>         
+                        </section>
                     <form>
                         <h3>Are you ready?!</h3>
-                        <input type="checkbox" value="court">Court</input>
-                        <input type="checkbox" value="paddle">Paddle</input>
-                        <input type="checkbox" value="ball">Ball</input>
-                        <input type="checkbox" value="partner">Someone to play against</input>
+                        <input type="checkbox" value="court" class="equipment">Court</input>
+                        <input type="checkbox" value="paddle" class="equipment">Paddle</input>
+                        <input type="checkbox" value="ball" class="equipment">Ball</input>
+                        <input type="checkbox" value="partner" class="equipment">Someone to play against</input>
                     </form>
-
+                    
                 </div>
             </main>
         </div>
         
         <footer class="">
             <div class="container">
-                <p class="copyright">&copy; 2017 Travis Cook</p>
+                    <p class="copyright">&copy; 2017 Travis Cook<br/>IS_LT 7356: Interactive Web Design with JavaScript</p>
             </div>
         </footer>
 

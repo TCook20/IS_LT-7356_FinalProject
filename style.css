@@ -77,10 +77,6 @@ a:hover, a:focus
 /* @end Basic Styles */
 
 /* @group Grid */
-.grid__row
-{
-
-}
 
 .grid__row::after
 {
@@ -168,6 +164,8 @@ a:hover, a:focus
 .hero h1
 {
     text-transform: uppercase;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 8px;
 }
 
 .hero.dark-theme
