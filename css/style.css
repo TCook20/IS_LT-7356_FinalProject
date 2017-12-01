@@ -1,0 +1,206 @@
+/*
+* Styles for IS_LT 7356 Final Project
+*
+* @author Travis Cook (cooktw@missouri.edu)
+*
+*/
+
+/* @group Basic Styles */
+article, aside, audio, canvas, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, video
+{
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+body
+{
+    margin: 0;
+}
+
+.container
+{
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 976px;
+}
+
+figure img
+{
+    display: block;
+}
+
+img
+{
+    max-width: 100%;
+    width: auto;
+    height: auto;
+    border: 0;
+}
+
+a
+{
+    color: #992d00;
+}
+
+a:hover, a:focus
+{
+    color: #000;
+}
+
+.aligncenter
+{
+    margin: 0 auto 16px auto;
+    text-align: center;
+    display: block;
+}
+
+.button
+{
+    font-weight: 600;
+    display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
+    text-align: center;
+    transition-property: #bd4d1f, #992d00, #fff;
+    transition-duration: 0.1s;
+    transition-timing-function: linear;
+    border-style: solid;
+    border-width: 1px;
+    background: #bd4d1f;
+    color: #fff;
+    border: 1px solid #992d00;
+    border-radius: 4px;
+    padding: 4px 16px;
+}
+
+/* @end Basic Styles */
+
+/* @group Grid */
+.grid__row
+{
+
+}
+
+.grid__row::after
+{
+    content: '';
+    clear: both;
+    display: block;
+}
+
+.grid-double__column
+{
+    width: 48%;
+    float: left;
+    padding: 0 8px 0 8px;
+}
+
+
+/* @end Grid */
+
+/* @group Header */
+.header__container
+{
+    padding: 24px 16px;
+}
+
+/* @end Headers */
+
+/* @group Navigation */
+.primary-navigation
+{
+    background: #000;
+}
+
+.nav-item--list
+{
+    display: block;
+    list-style: none;
+    padding: 0;
+    margin: 0 0 16px 0;
+}
+
+.nav-item
+{
+    display: inline-block;
+}
+
+.nav-link, .nav-current-page
+{
+    padding: 12px 16px;
+    margin: 0 0 0 -1px;
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+    display: block;
+}
+
+.nav-current-page
+{
+    background: #444;
+    background-image: linear-gradient(to bottom, #222 0%, #444 100%);
+    color: #33FF33;
+    
+}
+
+.nav-link
+{
+    text-decoration: none;
+    color: #fff;
+}
+
+.nav-link:hover
+{
+    background: #444;
+    background-image: linear-gradient(to bottom, #222 0%, #000 100%);
+    color: #33FF33;
+}
+
+/* @end Navigation */
+
+/* @group Content */
+.content__container
+{
+    padding-bottom: 64px;
+}
+
+.hero h1
+{
+    text-transform: uppercase;
+}
+
+.hero.dark-theme
+{
+    display: block;
+    width: 100%;
+    clear: both;
+    background: #444;
+    color: #fff;
+}
+
+.hero.dark-theme a
+{
+    color: #ccc;
+}
+
+.hero.dark-theme a:hover
+{
+    color: #000;
+}
+
+/* @end Content */
+
+/* @group Footer */
+footer
+{
+    background: #333;
+    padding: 16px;
+}
+
+footer p.copyright
+{
+    color: #ccc;
+}
+
+/* @end Footer */

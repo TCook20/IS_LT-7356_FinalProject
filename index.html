@@ -31,18 +31,58 @@
         <!-- Your styles -->
         <link rel="stylesheet" href="css/style.css">
     </head>
-    <body class="">
-        <header class="">
-
+    <body class="index">
+        <header class="header__container container">
+            <h1>Pickleball: America's Fastest Growing Sport</h1>
         </header>
-        <main class="">
-            <h1>Title</h1>
-            <p>Test paragraph.</p>
-
-        <footer class="">
+        <nav role="navigation" class="primary-navigation">
+            <div class="container">
+                <ul class="nav-item--list">
+                    <li class="nav-item"><strong class="nav-current-page">Home</strong></li>
+                    <li class="nav-item"><a href="equipment.html" class="nav-link">What You Need</a></li>
+                    <li class="nav-item"><a href="" class="nav-link">Play</a></li>
+                    <li class="nav-item"><a href="" class="nav-link">Contact</a></li>
+                </ul>
+            </div>
+            
+        </nav>
+        <div class="content">
+            <main class="">
+                <div class="hero dark-theme">
+                    <div class="container">
+                        <div class="grid__row">
+                            <div class="grid-double__column">
+                                <figure>
+                                    <img src="image/hero.jpg" alt="pickleball paddle" />
+                                </figure>
+                            </div>
+                            <div class="grid-double__column">
+                                <h1>A Brief History</h1>
+                                <p>Pickleball was invented in 1965 on Bainbridge Island, a short ferry ride from Seattle, Washington. Three dads – Joel Pritchard, Bill Bell, and Barney McCallum — whose kids were bored with their usual summertime activities — are credited for creating game. Pickleball has evolved from original handmade equipment and simple rules into a popular sport throughout the US and Canada. The game is growing internationally as well, with many European and Asian countries adding courts.</p>
+                                <p>(From the <a href="https://www.usapa.org/what-is-pickleball-brief-history" target="_blank">USAPA</a>)</p>
+                            </div>
+                        </div>  
+                    </div>
+                </div>
+                
+                <div class="content__container container">
+                    <div class="grid__row">
+                        <div class="grid-double__column">
+                            <p>The purpose of this site is to teach individuals who may be interested in pickleball some basics about the game so they may get out on the court and play!</p>
+                        </div>
+                        <div class="grid-double__column">
+                            <p class=""><a href="equipment.html" class="button aligncenter">Let's Get Started!</a></p>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
         
+        <footer class="">
+            <div class="container">
+                <p class="copyright">&copy; 2017 Travis Cook</p>
+            </div>
         </footer>
-        </main>
 
         <script src="js/main.js"></script>
 
