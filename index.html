@@ -30,6 +30,25 @@
 
         <!-- Your styles -->
         <link rel="stylesheet" href="style.css">
+
+        <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+        <script type="text/javascript">
+        /*
+		* Pull image from Flickr with tag 'pickleball'
+		* 
+		*/
+        $(document).ready(function(){
+            var url = "https://api.flickr.com/services/feeds/photos_public.gne?tags=pickleball&format=json&jsoncallback=?&per_page=1";
+
+            $.getJSON(url, function(data) {
+                var html = $("<img/>").attr({src: data.items[0].media.m.replace('_m.','.')});
+
+                $(".hero-image").html(html);
+            })
+        })
+
+        
+        </script>
     </head>
     <body class="index">
         <header class="header__container container">
@@ -52,7 +71,7 @@
                     <div class="container">
                         <div class="grid__row">
                             <div class="grid-double__column">
-                                <figure>
+                                <figure class="hero-image">
                                     <img src="image/hero.jpg" alt="pickleball paddle" />
                                 </figure>
                             </div>
@@ -70,8 +89,8 @@
                         <div class="grid-double__column">
                             <p>The purpose of this site is to teach individuals who may be interested in pickleball some basics about the game so they may get out on the court and play!</p>
                         </div>
-                        <div class="grid-double__column">
-                            <p class=""><a href="equipment.html" class="button aligncenter">Let's Get Started!</a></p>
+                        <div class="grid-double__column aligncenter">
+                            <p><a href="equipment.html" class="button">Let's Get Started!</a></p>
                         </div>
                     </div>
                 </div>
