@@ -31,14 +31,43 @@
         <!-- Your styles -->
         <link rel="stylesheet" href="style.css">
 
-        <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
         <script type="text/javascript">
         $(document).ready(function(){
-            var cbs = document.querySelectorAll('input[type=checkbox]');
-            var cbsChecked = document.querySelectorAll('input[type="checkbox"]:checked');
+            /*
+            * Set up draggables
+            * Requirement 5.b jQuery UI Interaction Draggable
+            */
+			$(".draggable").draggable({ cursor: "move", grid: [ 25, 34 ], snap: ".staging, .ready", helper:"clone", cursorAt: { left: 0, top: 0 } });
+            
+            /*
+            * Set up droppables
+            * Requirement 5.b jQuery UI Interaction droppable
+            */
+			$(".staging, .ready").droppable({
+				drop: function(event, ui) {
+                    ui.draggable.detach().appendTo($(this));
+                    droppedCount--;
+                    getReady();
+				}
+            });
 
-            if(cbsChecked.length === cbs.limit) {
-                alert("test");
+            // Set up counter for droppables
+            droppedCount = $(".staging").find('.draggable').length;
+            
+            /*
+            * Once all dropped display alert and button
+            * Requirement 3.a.4 custom function
+            */
+            function getReady() {
+                // Requirement 3.a.1 if statement
+                if (droppedCount === 0) {
+                    // Requirement 3.a.5 alert function
+                    alert('Time to start brushing up on the rules!');
+
+                    $('.next-page').removeClass('hidden');
+                }
             }
         })
         </script>
@@ -61,46 +90,90 @@
         <div class="content">
             <main class="">
                 <div class="content__container container">
-                        <section id="court">
-                            <div class="grid__row">
-                                <div class="grid-double__column">
-                                    <h2>Court</h2>
+                    <section id="court">
+                        <div class="grid__row">
+                            <div class="grid-double__column">
+                                <figure>
+                                    <img src="image/pickleballs_on_court.jpg" alt="pickleball court" />
+                                </figure>
+                            </div>
+                            <div class="grid-double__column">
+                                <h2>Court</h2>
+                                <p>In some communities, there are dedicated indoor and outdoor courts for pickleball.  Sometimes you may even see a tennis court with lines necessary for pickleball play.  In some recreation facilities, they may set up pickleball on basketball courts.</p>   
+                            </div>      
+                        </div>    
+                    </section>
+
+                    <section id="paddle">
+                        <div class="grid__row">
+                            <div class="grid-double__column">
+                                <h2>Paddle</h2>
+                                <p>When selecting your paddle you will need to consider: price, grip size, and weight.  Many beginners start playing the game using a wooden paddle, while advanced players may use a paddle made of aluminum. The material and how the paddle is made will help to determine the amount of power and control you will have on your shot.</p>
+                            </div>
+                            <div class="grid-double__column">
+                                <figure>
+                                    <img src="image/hero.jpg" alt="pickleball paddle" />
+                                </figure>      
+                            </div>      
+                        </div>         
+                    </section>
+
+                    <section id="ball">
+                        <div class="grid__row">
+                            <div class="grid-double__column">
+                                <figure>
+                                    <img src="image/pickleballs.jpg" alt="pickleball balls" />
+                                </figure>  
+                            </div>
+                            <div class="grid-double__column">
+                                <h2>Ball</h2>
+                                <p>In selecting the ball that you need, you will have to consider whether you intend on playing indoors or outdoors.  Balls with larger holes are made for indoor use, while balls that are harder and have smaller holes are for outdoor use.  The smaller holes should help the ball to not catch the wind.</p>        
+                            </div>      
+                        </div>         
+                    </section>
+                    <hr/>
+                    <section id="ready-to-play">
+                        <h2>Are you ready?!</h2>
+                        <p>Once you have had a chance to get familiar with what you need to play, drag the needed items from "Getting Ready" to "Let's Go!"</p>
+                        <p>Those items are: a court, a paddle, a ball, and a partner.</p>
+                        <div class="grid__row">
+                            <div class="grid-double__column">
+                                <h4>Getting Ready</h4>
+                                <div class="staging">
+                                    <div class="draggable" id="court">
+                                        <figure>
+                                            <img src="image/court.gif" alt="court" />
+                                        </figure>
+                                    </div>
+                                    <div class="draggable" id="paddle">
+                                        <figure>
+                                            <img src="image/paddle.jpg" alt="paddle" />
+                                        </figure>
+                                    </div>
+                                    <div class="draggable" id="ball">
+                                        <figure>
+                                            <img src="image/ball.png" alt="ball" />
+                                        </figure>
+                                    </div>
+                                    <div class="draggable" id="partner">
+                                        <figure>
+                                            <img src="image/partner.jpg" alt="partner" />
+                                        </figure>
+                                    </div>
                                 </div>
-                                <div class="grid-double__column">
-                                    <p></p>   
-                                </div>      
-                            </div>    
-                        </section>
-    
-                        <section id="paddle">
-                            <div class="grid__row">
-                                <div class="grid-double__column">
-                                    <p></p>
+                            </div>
+                            <div class="grid-double__column">
+                                <h4>Let's Go!</h4>
+                                <div class="ready">
+                                    
+                                </div>  
+                                
+                                <div class="next-page hidden">
+                                    <p><a href="play.html" class="button">Basic Rules</a></p>
                                 </div>
-                                <div class="grid-double__column">
-                                    <h2>Paddle</h2>        
-                                </div>      
-                            </div>         
-                        </section>
-    
-                        <section id="ball">
-                            <div class="grid__row">
-                                <div class="grid-double__column">
-                                    <h2>Ball</h2>    
-                                </div>
-                                <div class="grid-double__column">
-                                    <p></p>        
-                                </div>      
-                            </div>         
-                        </section>
-                    <form>
-                        <h3>Are you ready?!</h3>
-                        <input type="checkbox" value="court" class="equipment">Court</input>
-                        <input type="checkbox" value="paddle" class="equipment">Paddle</input>
-                        <input type="checkbox" value="ball" class="equipment">Ball</input>
-                        <input type="checkbox" value="partner" class="equipment">Someone to play against</input>
-                    </form>
-                    
+                            </div>
+                        </div>
+                    </section> 
                 </div>
             </main>
         </div>

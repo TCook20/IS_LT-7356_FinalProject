@@ -74,6 +74,11 @@ a:hover, a:focus
     padding: 4px 16px;
 }
 
+.hidden
+{
+    display: none;
+}
+
 /* @end Basic Styles */
 
 /* @group Grid */
@@ -185,6 +190,22 @@ a:hover, a:focus
 .hero.dark-theme a:hover
 {
     color: #000;
+}
+
+.draggable
+{
+    display: inline-block;
+}
+
+.draggable figure img
+{
+    max-width: 75px;
+}
+
+.staging, .ready
+{
+    height: 200px;
+    border: 1px solid #000;
 }
 
 /* @end Content */

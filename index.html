@@ -47,6 +47,13 @@
 
                 $(".hero-image").html(html);
             })
+
+            $('.button').hover(function() {
+                // Requirement 4e jQuery Animation
+                $('.button').animate({ fontSize: "150%"})
+            }, function() {
+                $('.button').animate({ fontSize: "100%"})
+            })
         })
         </script>
     </head>
@@ -60,8 +67,8 @@
                 <ul class="nav-item--list">
                     <li class="nav-item"><strong class="nav-current-page">Home</strong></li>
                     <li class="nav-item"><a href="equipment.html" class="nav-link">What You Need</a></li>
-                    <li class="nav-item"><a href="" class="nav-link">Play</a></li>
-                    <li class="nav-item"><a href="" class="nav-link">Contact</a></li>
+                    <li class="nav-item"><a href="play.html" class="nav-link">Play</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
                 </ul>
             </div>
             
@@ -73,7 +80,7 @@
                         <div class="grid__row">
                             <div class="grid-double__column">
                                 <figure class="hero-image">
-                                    <img src="image/hero.jpg" alt="pickleball paddle" />
+                                    
                                 </figure>
                             </div>
                             <div class="grid-double__column">
