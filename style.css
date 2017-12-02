@@ -79,6 +79,62 @@ a:hover, a:focus
     display: none;
 }
 
+.ui-tabs-nav
+{
+    margin: 0;
+    padding: .2em .2em 0;
+}
+
+.ui-tabs-tab
+{
+    list-style: none;
+    float: left;
+    position: relative;
+    top: 0;
+    margin: 1px .2em 0 0;
+    border-bottom-width: 0;
+    padding: 0;
+}
+
+.ui-state-default
+{
+    border: 1px solid #c5c5c5;
+    background: #f6f6f6;
+    color: #454545;
+}
+
+.ui-state-active
+{
+    background: #444;
+    background-image: linear-gradient(to bottom, #222 0%, #444 100%);
+    color: #33FF33;
+    font-weight: 600;
+}
+
+.ui-state-active .ui-tabs-anchor
+{
+    color: #33FF33;
+}
+
+.ui-state-hover
+{
+    background: #ebdfdf;
+}
+
+.ui-tabs-anchor
+{
+    float: left;
+    padding: .5em 1em;
+    text-decoration: none;
+}
+
+.ui-tabs-panel
+{
+    border-width: 0;
+    padding: 1em 1.4em;
+    clear: both;
+}
+
 /* @end Basic Styles */
 
 /* @group Grid */

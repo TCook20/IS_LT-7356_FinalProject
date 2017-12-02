@@ -13,4 +13,8 @@ $(document).ready(function(){
     }, function() {
         $('.button').animate({ fontSize: "100%"});
     });
+
+    // Requirement 5a jQuery UI Widget
+    $( "#tabs" ).tabs();
+    $( "#accordion" ).accordion();
 });
