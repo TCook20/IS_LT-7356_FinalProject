@@ -30,6 +30,32 @@
 
         <!-- Your styles -->
         <link rel="stylesheet" href="style.css">
+
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.17.0/dist/jquery.validate.min.js"></script>
+        <script type="text/javascript">
+        $(document).ready(function() {
+            
+            // Form Validation
+            $("#contact-form").validate({
+                // Custom Rules
+                rules: {
+                    name: "required",
+                    email: {
+                        required: true,
+                        email: true
+                    },
+                    comment: "required"
+                },
+                success: "valid",
+                submitHandler: function() {
+                    alert("Your question or commment has been submitted! You will receive a response within one week.  Thank you!");
+                    form.submit();
+                }
+            });
+
+        }); 
+        </script>
     </head>
     <body class="index">
         <header class="header__container container">
@@ -50,14 +76,14 @@
             <main class="">
                 <div class="content__container container">
                     <h1>Contact</h1>
-                    <form>
+                    <form id="contact-form" name="contact-form" method="get" action="">
                         <h3>Are you ready?!</h3>
                         <div class="form-item">
                             <div class="form-label">
                                     <label for="name" id="name">Name</label>
                             </div>
                             <div class="item-type">
-                                <input type="text" name="name" id="name" />
+                                <input type="text" name="name" id="name" autofocus />
                             </div>
                         </div>
                         <div class="form-item">
@@ -68,7 +94,17 @@
                                  <input type="email" name="email" id="email" />
                             </div>
                         </div>
-                        
+                        <div class="form-item">
+                            <div class="form-label">
+                                <label for="comment" id="comment">Questions or Comments</label>
+                            </div>
+                            <div class="item-type">
+                                    <textarea rows="10" cols="50" id="comment" name="comment"></textarea>
+                            </div>
+                        </div>
+                        <div class="form-item">
+                            <button type="submit">Submit</button>
+                        </div>
                     </form>
                 </div>
             </main>
@@ -79,8 +115,6 @@
                     <p class="copyright">&copy; 2017 Travis Cook<br/>IS_LT 7356: Interactive Web Design with JavaScript</p>
             </div>
         </footer>
-
-        <script src="js/main.js"></script>
 
     </body>
 </html>
