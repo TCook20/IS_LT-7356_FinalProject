@@ -63,7 +63,8 @@
             function getReady() {
                 // Requirement 3.a.1 if statement
                 if (droppedCount === 0) {
-                    $('.next-page').removeClass('hidden');
+                    // Requirement 3.b.3 Change Attribute
+                    document.getElementById('next-page').removeAttribute('class', 'hidden');
                 }
             }
         })
@@ -166,7 +167,7 @@
                                     
                                 </div>  
                                 
-                                <div class="next-page hidden">
+                                <div id="next-page" class="hidden">
                                     <p><a href="play.html" class="button">Basic Rules</a></p>
                                 </div>
                             </div>
