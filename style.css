@@ -135,6 +135,11 @@ a:hover, a:focus
     clear: both;
 }
 
+h2.ui-state-active, h2.ui-state-default
+{
+    padding: 8px;
+}
+
 /* @end Basic Styles */
 
 /* @group Grid */
